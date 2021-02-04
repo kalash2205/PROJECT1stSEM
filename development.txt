@@ -1,0 +1,38 @@
+Hello, Welcome to our restaurant!
+
+~~~##Serve him some water and give him the menu
+
+Menu
+--->1.Indian
+--->2.Chinese
+--->3.French 
+--->4.Italian
+--->5.Miamese
+--->6.Drinks
+--->7.Soups/Starters....
+Select the origin of the food you want to see the menu of: 1, Indian. \\enum countryFood= {"Indian" =1; "Chinese", "French"}; \\\ enum countryFood choice;
+    ---->North Indian
+    ---->South Indian
+    ---->Punjabi
+    ---->Indian Breads
+    Which type of Indian food you want to see the menu of: 
+        ---->******MENU******
+    ---->1.Do you want to add anything else from this menu?
+    ---->2.Do you want to go a step back in the menu?
+    ---->3.Do you want to review your order so far, and place the order?
+
+Yes I want to place the order now!
+
+Okay! Your food will be served shortly.
+
+*******10-15 seconds gap*********
+*******Display the food that gets served!***********
+Enjoy your meal!
+
+~~~##Ask if he wants the menu to order anything else! Yes, menu!
+
+
+*******Time gap********
+~~~##Review/ Feedback
+Bill---->GST+ServiceTax....
+~~~##Take name and phone number and next time if same person comes, give discount if bill exceeds a certain amount.
