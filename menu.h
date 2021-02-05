@@ -1,7 +1,7 @@
 int trial()
 {
-    enum countryFood {Indian= 1, Chinese};
+    enum countryFood {Indian= 1, Chinese, French, Italian, Japanese, Drinks, Starters, Miamese};
     enum countryFood n1= Indian;
-    printf("%d", n1);
+    scanf("%s", n1);
     return 0;
 }
