@@ -5,14 +5,13 @@ Menu
 --->2.Chinese   
 --->3.French 
 --->4.Italian
---->5.Miamese
---->6.Drinks
---->...
+--->5.THAI
+--->6.SPANISH
 Select the origin of the food you want to see the menu of: 1, Indian. \\enum countryFood= {"Indian" =1; "Chinese", "French"}; \\\ enum countryFood choice;
-    ---->North Indian
-    ---->South Indian
-    ---->Punjabi
-    ---->Indian Breads
+    1. STARTERS
+    2. MAIN COURSE
+    3. DESSERTS
+    4. DRINKS
     Which type of Indian food you want to see the menu of: 
         ---->******MENU******
     ---->1.Do you want to add anything else from this menu?
