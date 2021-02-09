@@ -1,12 +1,12 @@
 Hello, Welcome to our restaurant!
 
 Menu
---->1.Indian
---->2.Chinese   
---->3.French 
---->4.Italian
---->5.THAI
---->6.SPANISH
+--->1. Indian
+--->2. Chinese   
+--->3. French 
+--->4. Italian
+--->5. THAI
+--->6. SPANISH
 Select the origin of the food you want to see the menu of: 1, Indian. \\enum countryFood= {"Indian" =1; "Chinese", "French"}; \\\ enum countryFood choice;
     1. STARTERS
     2. MAIN COURSE
