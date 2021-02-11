@@ -1,0 +1,20 @@
+Algorithm
+{
+    //Declare global variables in main, so that its available in all the header files.
+    //resultOrderString, menuString;
+    1. trial()
+    {
+        --Make a single string array that contains your menu options: North Indian, South Indian, "Starters", "";
+        --index==choice || string[index] == choiceString
+        --Display Choice String
+            --String Array>>Paneer Tikka
+            --Float Array>>Price
+            --Choice
+            --Store in resultOrderString;
+            --1.back || 2.order more from this
+        ..
+        ..
+        ..
+        1.Display resultOrderString and ask if he wants to modify--> Order will be served shortly.
+    }
+}
