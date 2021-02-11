@@ -50,28 +50,25 @@ void signup()
         if (strcmp(number[i].NAME, username) == 0)
         {
             printf("\n username exists already");
-            signup();
+            return 0;
         }
         else
         {
             strcpy(registration.NAME, username);
             break;
-
         }
-    }
-    
+    } 
     printf("\nenter a password:");
     scanf("%s", password);
     strcpy(registration.PASSWORD, password);
     textfile(registration);
-
-   
 }
 
 int main()
 {
     int choice;
-    
+    FILE *fptr;
+    fptr = fopen("details.txt", "r");  
     printf("*************WELCOME TO THE ----------**************\n");
     printf("1. LOGIN\n2. SIGNUP\n3. GUEST ");
     printf("Enter you choice: ");
@@ -79,10 +76,10 @@ int main()
     if (choice == 1)
     {
         login();
-
     }
     else if(choice==2)
     {
         signup();
     }
+    fclose(fptr);
 }
