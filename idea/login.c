@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
 typedef struct
 {
     char NAME[10];
@@ -25,7 +23,17 @@ USER login()
     return login;
 }
 
-void textfile();//
+void textfile(USER customer);
+void textfile(USER customer)
+{
+    FILE *fptr;
+    fptr = fopen("details.txt", "a+");
+    fprintf(fptr, customer.NAME);
+    fprintf(fptr, "\t");
+    fprintf(fptr, customer.PASSWORD);
+    fprintf(fptr, "\n");
+}
+
 
 
 void signup();
@@ -34,7 +42,7 @@ void signup()
     int i;
     char username[20];
     char password[20];
-    USER signup;
+    USER registration;
     printf("\nenter a username: ");
     scanf("%s", username);
      for (i = 0; i < 100; i++)
@@ -46,7 +54,7 @@ void signup()
         }
         else
         {
-            strcpy(signup.NAME, username);
+            strcpy(registration.NAME, username);
             break;
 
         }
@@ -54,7 +62,8 @@ void signup()
     
     printf("\nenter a password:");
     scanf("%s", password);
-    strcpy(signup.PASSWORD, password);
+    strcpy(registration.PASSWORD, password);
+    textfile(registration);
 
    
 }
@@ -64,7 +73,7 @@ int main()
     int choice;
     
     printf("*************WELCOME TO THE ----------**************\n");
-    printf("1. LOGIN\n2.SIGNUP\n3.GUEST ");
+    printf("1. LOGIN\n2. SIGNUP\n3. GUEST ");
     printf("Enter you choice: ");
     scanf("%d", &choice);
     if (choice == 1)

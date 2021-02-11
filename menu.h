@@ -1,4 +1,4 @@
-void upperLayerMenu(char menuOptions[255][255])
+void upperLayerMenu(char menuOptions[8][255])
 {
     // enum countryFood {Starters= 1, Indian, Chinese, French, Pasta, Pizzas, Drinks};
     // enum countryFood n1;
@@ -9,7 +9,7 @@ void upperLayerMenu(char menuOptions[255][255])
     printf("\033[7m\t\t\t      MENU      \t\t\t\033[0m\n");
     printf("************************************************************\n");
     
-    for(int i=0; i<strlen(menuOptions); i++)
+    for(int i=0; i<8; i++)
     {
         printf("\t       %d.%s\n",(i+1), menuOptions[i]);
     }
