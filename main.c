@@ -18,7 +18,7 @@ int main()
                 "HOT BEVERAGES",
                 "COCKTAILS AND SOFT DRINKS",
             };
-        char resultOrder[255][255];
+        char resultOrder[255][255];           
         printf("\033[1m\t\t\t\033[7mWELCOME TO PUZZLES!!\033[0m\n\n\n");
         initialMenuBegin:
         printf("\n");
