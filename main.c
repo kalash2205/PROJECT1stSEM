@@ -4,6 +4,7 @@
 #include "menu.h"
 #include "timeGap.h"
 #include "bill.h"
+#include "orderDisandPlace.h"
 
 int main()
 {
@@ -17,15 +18,27 @@ int main()
                 "HOT BEVERAGES",
                 "COCKTAILS AND SOFT DRINKS",
             };
-
+        char resultOrder[255][255];
         printf("\033[1m\t\t\t\033[7mWELCOME TO PUZZLES!!\033[0m\n\n\n");
+        initialMenuBegin:
+        printf("\n");
         int choiceMenu= upperLayerMenu(menuOptions);
         switch(choiceMenu)
         {
                 case 1: printf("\n*******************************");
                         printf("%s", menuOptions[0]);
                         printf("*******************************\n");
-                        startersMenu();
+                        int stepChoice=startersMenu(resultOrder);
+                        if(stepChoice==2)
+                        goto initialMenuBegin;
+                        else if(stepChoice==3)
+                        {
+                                orderDisplay(resultOrder);
+                                int chFin=0;
+                                printf("\n1. Place the order.");
+                                if(chFin==1)
+                                goto placedOrder;
+                        }
                         break;
                 case 2: printf("\n*****************");
                         printf("%s", menuOptions[1]);
@@ -59,7 +72,8 @@ int main()
                          break;
                 
         }
-
+        placedOrder:
         //timegap(10);
         //displayBill();
+        return 0;
 }
