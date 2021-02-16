@@ -8,6 +8,7 @@
 
 int main()
 {
+        int x=0;
         char menuOptions[8][255] ={
                 "STARTERS",
                 "NORTH INDIAN",
@@ -28,12 +29,13 @@ int main()
                 case 1: printf("\n*******************************");
                         printf("%s", menuOptions[0]);
                         printf("*******************************\n");
-                        int stepChoice=startersMenu(resultOrder);
+                        int stepChoice=0;
+                        stepChoice=startersMenu(resultOrder, &x);
                         if(stepChoice==2)
                         goto initialMenuBegin;
                         else if(stepChoice==3)
                         {
-                                orderDisplay(resultOrder);
+                                orderDisplay(resultOrder, &x);
                                 int chFin=0;
                                 printf("\n1. Place the order.");
                                 if(chFin==1)
