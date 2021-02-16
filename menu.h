@@ -19,9 +19,8 @@ int upperLayerMenu(char menuOptions[8][255])
     return choiceMenu;
 }
 
-int startersMenu(char *resultOrder[255][255])
+int startersMenu(char resultOrder[255][255], int *x) 
 {
-    static int x=0;
     char startersItemsNames[][255]={
         {"Kakori Kebabs------------------Veg "},
         {"Stir Fried Chilli Chicken------Nveg"},
@@ -43,7 +42,8 @@ int startersMenu(char *resultOrder[255][255])
     int startersChoice=0;
     printf("\n\nEnter the food number you want to order: ");
     scanf("%d", &startersChoice);
-    strcpy(*resultOrder[x++], startersItemsNames[startersChoice-1]);
+    strcpy(resultOrder[*x], startersItemsNames[startersChoice-1]);
+    *x=*x+1;
     printf("\n%s added to order!\n", startersItemsNames[startersChoice-1]);
     printf("\n1.Do you want to add anything more from Starters Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
