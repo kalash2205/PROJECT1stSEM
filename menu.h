@@ -143,32 +143,38 @@ firstTime:
 int southIndianMenu(char resultOrder[255][255], int *x)
 {
     char southIndianItemsNames[][255] = {
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}
+        {"Tamarind Rice"},
+        {"Curd Rice"},
+        {"Malabar Fish Biryani"},
+        {"Avial with Kerela Red Rice"},
+        {"Plain Butter Dosa"},
+        {"Mysore Masala Dosa"},
+        {"Onion Plain Dosa"},
+        {"Veg Rava Paneer Dosa"},
+        {"Potato Green Peas Poriyal"},
+        {"Kadala Curry"},
+        {"Fish Gassi"},
+        {"Arachu Vitta Sambar"},
+        {"Chicken Stew With Appams"},
+        {"Tomato Gujju"},
+        {"Pepper Garlic Rasam"},
+        {"Mulangi Sambar"},
+        {"Ginger Chutney"},
+        {"Roasted Chana Dal Chutney"},
+        {"Mango Kuzhambu"},  
+        {"Kasi Halwa"},
+        {"Thick Butter Milk"},
+        {"Garlic Podi Idli Fry"},
+        {"Pesarattu"},
+        {"Coconut Raita"},
+        {"Tomato Pachadi"}
+         
+       
     };
     float southIndianItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 southIndianDisplay:
     printf("\n*******************************SOUTH INDIAN*******************************\n");
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 25; i++)
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), southIndianItemsNames[i], southIndianItemsCost[i]);
     }
@@ -270,27 +276,27 @@ firstTime:
 int continentalMenu(char resultOrder[255][255], int *x)
 {
     char continentalItemsNames[][255] = {
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}
+        {"Crispy Calamari Rings"},
+        {"Paneer Steak"},
+        {"Mutton Stew"},
+        {"Cauliflower Mornay"},
+        {"Cocktail Prawns"},
+        {"Poached Salmon"},
+        {"Potato Croquet"},
+        {"Roasted Bell Pepper Hummus"},
+        {"Baba Ghanouj"},
+        {"Falafel Platter"},
+        {"Chicken Tenders"},
+        {"Legume Diane"},
+        {"Beef Stroganoff"},
+        {"Smoked Kidney Bean Salad"},
+        {"Mushroom Stuffed Tomatoes"},
+        {"Peppy Tomato Vegetable Roll"},
+        {"Broiled Boston Scrod"},
+        {"Lasagna"},
+        {"Stuffed Grape Leaves"},
+        {"Tyropita"},
+        {"Shrimp Basket With fries"}
     };
     float continentalItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 continentalDisplay:
@@ -398,32 +404,28 @@ firstTime:
 int dessertsMenu(char resultOrder[255][255], int *x)
 {
     char dessertsItemsNames[][255] = {
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}
+        {"Chocolate Fondue"},
+        {"Brownie Sundae"},
+        {"Lemon Souffles"},
+        {"Tiramisu layer Cake"},
+        {"Hot Fudge Cake"},
+        {"Apple Pie"},
+        {"Strawberry Cheesecake"},
+        {"Lemon Sorbet"},
+        {"Oreo Cake"},
+        {"Mysore Pak"},
+        {"Rasmalai"},
+        {"Indian Shrikhand"},
+        {"Shahi Tukra"},
+        {"Kulfi"},
+        {"Gajar Ka Halwa"},
+        {"Gulab Jamun"},
+
     };
     float dessertsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 dessertsDisplay:
     printf("\n*******************************DESSERTS*******************************\n");
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 16; i++)
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), dessertsItemsNames[i], dessertsItemsCost[i]);
     }
@@ -461,6 +463,19 @@ firstTime:
 int hotBeveragesMenu(char resultOrder[255][255], int *x)
 {
     char hotBeveragesItemsNames[][255] = {
+        {"Espresso"},
+        {"Cappucino"},
+        {"Mocha"},
+        {"Masala Chai"},
+        {"Butter Tea"},
+        {"Hot Chocolate"},
+        {"South Indian Filter Coffee"},
+        {"Hot Fruit Punch"},
+        {"Kesaria Doodh"},
+        {"Steamed Milk"},
+        {"Caramel Latte"},
+        
+        /*{""},
         {""},
         {""},
         {""},
@@ -469,24 +484,12 @@ int hotBeveragesMenu(char resultOrder[255][255], int *x)
         {""},
         {""},
         {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}
+        {""}*/
     };
     float hotBeveragesItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 hotBeveragesDisplay:
     printf("\n*******************************HOT BEVERAGES*******************************\n");
-    for (int i = 0; i < 21; i++)
+    for (int i = 0; i < 11; i++)
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), hotBeveragesItemsNames[i], hotBeveragesItemsCost[i]);
     }
