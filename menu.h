@@ -19,6 +19,7 @@ int upperLayerMenu(char menuOptions[8][255])
     return choiceMenu;
 }
 
+
 int startersMenu(char resultOrder[255][255], int *x) 
 {
     char startersItemsNames[][255]={
@@ -31,7 +32,7 @@ int startersMenu(char resultOrder[255][255], int *x)
         {"Bhuna Masala Chicken Wings-----NVeg"},
         {"Tangri Kebabs------------------NVeg"},
         {"Momos--------------------------Veg "},
-        {"Steamed Wontons---------------Veg  "}
+        {"Steamed Wontons----------------Veg "}
     };
     float startersItemsCost[]={130, 340, 200, 140, 240, 300, 360, 310, 120, 150};
     startersDisplay:
@@ -52,6 +53,46 @@ int startersMenu(char resultOrder[255][255], int *x)
     scanf("%d", &stepChoice);
     if(stepChoice==1)
     goto startersDisplay;
+    else if(stepChoice==2)
+    return 2;
+    else if(stepChoice==3)
+    return 3;
+}
+int NIMenu(char resultOrder[255][255], int *x) 
+{
+    char NIItemsNames[][255]={
+        {"Malai Kofta---------------------Veg "},
+        {"Butter Chicken------------------Nveg"},
+        {"Gobhi Lazeez--------------------Veg "},
+        {"Paneer Lababdaar----------------Veg "},
+        {"Soya Jalfrezi-------------------Veg "},
+        {"Beef Roganjosh------------------NVeg"},
+        {"Vegetable Korma-----------------Veg "},
+        {"Goat Bhuna----------------------NVeg"},
+        {"Chana Masala--------------------Veg "},
+        {"Palak Paneer--------------------Veg "},
+        {"Kurkuri Bhindi------------------Veg "},
+        {"Mushroom Bhajee-----------------Veg "}
+    };
+    float NICost[]={130, 340, 200, 140, 240, 300, 360, 310, 120, 150};
+    NIdisplay:
+    for(int i=0; i<12; i++)
+    {
+        printf("\t%d.%s\t\t%.2f\n", (i+1), NIItemsNames[i], NICost[i]);
+    }
+    int NIchoice=0;
+    printf("\n\nEnter the food number you want to order: ");
+    scanf("%d", &NIchoice);
+    strcpy(resultOrder[*x], NIItemsNames[NIchoice-1]);
+    *x=*x+1;
+    printf("\n%s added to order!\n", NIItemsNames[NIchoice-1]);
+    printf("\n1.Do you want to add anything more from North Indian Menu?\n");
+    printf("\n2.Do you want to step back and order from other options?\n");
+    printf("\n3.Do you want to review and place your order?\n");
+    int stepChoice=0;
+    scanf("%d", &stepChoice);
+    if(stepChoice==1)
+    goto NIdisplay;
     else if(stepChoice==2)
     return 2;
     else if(stepChoice==3)
