@@ -1,28 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include "menu.h"
 #include "timeGap.h"
 #include "bill.h"
 #include "orderDisandPlace.h"
-#include "game.h"
+#include "custDetail.h"
 
 int main()
 {
+        
         int x = 0;
         char menuOptions[][255] = {
-            "STARTERS",
-            "NORTH INDIAN",
-            "SOUTH INDIAN",
-            "INDIAN BREADS",
-            "CONTINENTAL", //French, Spanish and Italian cuisine
-            "BREAKFAST",
+            "APPETIZERS",
+            "MAIN COURSE",
+            "RICE",
+            "BREADS",
+            "SNACKS", //French, Spanish and Italian cuisine
+            "SOUPS",
+            "SALADS",
             "DESSERTS",
             "HOT BEVERAGES",
-            "COCKTAILS AND SOFT DRINKS",
+            "SOFT DRINKS",
+            "CHINESE"
         };
-        char resultOrder[255][255];       
+        char resultOrder[255][255];          
         printf("\033[1m\t\t\t\033[7mWELCOME TO PUZZLES!!\033[0m\n\n\n");
 initialMenuBegin:
         printf("\n");
@@ -167,17 +169,9 @@ initialMenuBegin:
                 break;
         }
 placedOrder:
-        printf("\nYOUR ORDER HAS BEEN SUCCESSFULLY PLACED!!\nIt will be served shortly..\n\n");
-        printf("Would you like to play a guessing game while the foods coming?(Y/N): ");
-        char gameChoice;
-        scanf(" %c", &gameChoice);
-        if(gameChoice=='Y')
-        guessGame();
-        else
-        {
-                printf("Alright! Wait for sometime\n");
-                timegap(10);
-        }
+        //timegap(10);
         //displayBill();
+        //inputdetails();
+
         return 0;
 }
