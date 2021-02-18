@@ -167,9 +167,7 @@ int southIndianMenu(char resultOrder[255][255], int *x)
         {"Garlic Podi Idli Fry"},
         {"Pesarattu"},
         {"Coconut Raita"},
-        {"Tomato Pachadi"}
-         
-       
+        {"Tomato Pachadi"}   
     };
     float southIndianItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 southIndianDisplay:
@@ -527,27 +525,27 @@ firstTime:
 int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int *x)
 {
     char cocktailsAndSoftDrinksItemsNames[][255] = {
+        {"Caprioska"},
+        {"Mojito"},
+        {"Cosmopolitan"},
+        {"Long Island Ice tea"},
+        {"Pina Colada"},
+        {"Sangaria"},
+        {"Margarita"},
+        {"Fresh Lime Squash"},
+        {"Coconut Spritzer"},
+        {"Pepsi"},
+        {"Coca Cola "},
+        {"Sprite"},
+        {"Fruit Punch"},
+        {"Iced Tea"},
+        {"Shirley temple"},
+        /*{""},
         {""},
         {""},
         {""},
         {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}
+        {""}*/
     };
     float cocktailsAndSoftDrinksItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 cocktailsAndSoftDrinksDisplay:
