@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "menu.h"
 #include "timeGap.h"
 #include "bill.h"
 #include "orderDisandPlace.h"
+#include "game.h"
 
 int main()
 {
@@ -17,7 +19,7 @@ int main()
             "HOT BEVERAGES",
             "COCKTAILS AND SOFT DRINKS"
         };
-        char resultOrder[255][255];
+        char resultOrder[255][255];       
         printf("\033[1m\t\t\t\033[7mWELCOME TO PUZZLES!!\033[0m\n\n\n");
 initialMenuBegin:
         printf("\n");
@@ -162,7 +164,17 @@ initialMenuBegin:
                 break;
         }
 placedOrder:
-        //timegap(10);
+        printf("\nYOUR ORDER HAS BEEN SUCCESSFULLY PLACED!!\nIt will be served shortly..\n\n");
+        printf("Would you like to play a guessing game while the foods coming?(Y/N): ");
+        char gameChoice;
+        scanf(" %c", &gameChoice);
+        if(gameChoice=='Y')
+        guessGame();
+        else
+        {
+                printf("Alright! Wait for sometime\n");
+                timegap(10);
+        }
         //displayBill();
         return 0;
 }
