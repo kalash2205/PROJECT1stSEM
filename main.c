@@ -6,7 +6,6 @@
 #include "bill.h"
 #include "orderDisandPlace.h"
 #include "custDetail.h"
-
 int main()
 {
         

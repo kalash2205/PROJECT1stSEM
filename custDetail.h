@@ -1,14 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 typedef struct
 {
-    char NAME[10];
-    char PASSWORD[10];
-} USER;
-USER number[100];
+    char NAME[50];
+    char PHONE[15];
+}customer;
 
-USER login();
+/*USER login();
 USER login()
 {
     char username[20];
@@ -21,22 +17,33 @@ USER login()
     scanf("%s", password);
     strcpy(login.PASSWORD, password);
     return login;
-}
+}*/
 
-void textfile(USER customer);
-void textfile(USER customer)
+//void textfile(customer);
+void textfile(customer id)
 {
     FILE *fptr;
     fptr = fopen("details.txt", "a+");
-    fprintf(fptr, customer.NAME);
+    fprintf(fptr, id.NAME);
     fprintf(fptr, "\t");
-    fprintf(fptr, customer.PASSWORD);
+    fprintf(fptr, id.PHONE);
     fprintf(fptr, "\n");
+}
+void inputdetails()
+//int main()
+{
+    customer id;
+    printf("Enter you name: ");
+    scanf(" %[^\n]s", id.NAME);
+    printf("\nEnter you phone number: ");
+    scanf("%s", &id.PHONE);
+    textfile(id);
 }
 
 
 
-void signup();
+
+/*void signup();
 void signup()
 {
     int i;
@@ -62,9 +69,9 @@ void signup()
     scanf("%s", password);
     strcpy(registration.PASSWORD, password);
     textfile(registration);
-}
+}*/
 
-int main()
+/*int main()
 {
     int choice;
     FILE *fptr;
@@ -82,4 +89,4 @@ int main()
         signup();
     }
     fclose(fptr);
-}
+}*/
