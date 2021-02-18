@@ -11,14 +11,11 @@ int main()
         int x = 0;
         char menuOptions[][255] = {
             "STARTERS",
-            "NORTH INDIAN",
-            "SOUTH INDIAN",
-            "INDIAN BREADS",
-            "CONTINENTAL", //French, Spanish and Italian cuisine
+            "MAIN COURSE",
             "BREAKFAST",
             "DESSERTS",
             "HOT BEVERAGES",
-            "COCKTAILS AND SOFT DRINKS",
+            "COCKTAILS AND SOFT DRINKS"
         };
         char resultOrder[255][255];
         printf("\033[1m\t\t\t\033[7mWELCOME TO PUZZLES!!\033[0m\n\n\n");
