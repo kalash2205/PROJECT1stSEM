@@ -1,5 +1,5 @@
 
-void displayBill(char finalChoice[][100], int quantity[], int price[])
+void displayBill(char resultorder[255][255], int quantity[100], int price[100], int *x)
 {
     float subtotal;
     float discount;
@@ -15,19 +15,21 @@ void displayBill(char finalChoice[][100], int quantity[], int price[])
     printf("\t\t________________________________________________________________________________\n");
     printf("\t\tITEM\t\tQUANTITY\t\tPRICE(in Rs.)\t\tAMOUNT(in Rs.)\n");
     printf("\t\t________________________________________________________________________________\n\n\n\n");
-    for(int i=0; ;i++)
+    for (int i = 0; i < *x; i++)
     {
-        printf("\t\t%s\t\t%d\t\t%d\t\t%d", finalChoice[i][100], quantity[i], price[i], quantity[i]*price[i]);
+        printf("\t\t%s\t\t%d\t\t%d\t\t%d", resultorder[i][255], quantity[i], price[i], quantity[i] * price[i]);
     }
 
     printf("\t\t________________________________________________________________________________\n\n");
-
-    subtotal = 
-    discount = 0.1*subtotal;
-    nettotal = subtotal-discount;
-    service = 0.058*nettotal;
-    cgst = 0.025*nettotal;
-    sgst = 0.025*nettotal;
+    for (int i = 0; i < *x; i++)
+    {
+        subtotal += quantity[i] * price[i];
+    }
+    discount = 0.1 * subtotal;
+    nettotal = subtotal - discount;
+    service = 0.058 * nettotal;
+    cgst = 0.025 * nettotal;
+    sgst = 0.025 * nettotal;
     grandtotal = nettotal + service + cgst + sgst;
 
     printf("\t\t                                                       -------------------------\n");

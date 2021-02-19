@@ -14,7 +14,7 @@ int upperLayerMenu(char menuOptions[][255])
     return choiceMenu;
 }
 
-int startersMenu(char resultOrder[255][255], int *x)
+int startersMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char startersItemsNames[][255] = {
         {"Kakori Kebabs------------------Veg "},
@@ -26,7 +26,7 @@ int startersMenu(char resultOrder[255][255], int *x)
         {"Stuffed Bati-------------------Veg "},
         {"Chicken Satay------------------NVeg"},
         {"Bhuna Masala Chicken Wings-----NVeg"},
-        {"Tangri Kebabs-----------------NVeg"},
+        {"Tangri Kebabs------------------NVeg"},
         {"Momos-------------------------Veg "},
         {"Steamed Wontons---------------Veg  "},
         {"Gobi Manchurian---------------Veg "},
@@ -45,12 +45,16 @@ startersDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), startersItemsNames[i], startersItemsCost[i]);
     }
-    int startersChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int startersChoice = 0, sq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &startersChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &sq);
     if (startersChoice > 0 && startersChoice <= 21)
     {
         strcpy(resultOrder[*x], startersItemsNames[startersChoice - 1]);
+        price[*x] = startersItemsCost[startersChoice - 1];
+        quantity[*x] = sq;
         *x = *x + 1;
     }
     else if (startersChoice == 0)
@@ -76,22 +80,22 @@ firstTime:
     else if (stepChoice == 3)
         return 3;
 }
-int northIndianMenu(char resultOrder[255][255], int *x)
+int northIndianMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char northIndianItemsNames[][255] = {
         {"Chole Bhature------------------Veg "},
-        {"Rogan Josh------Nveg"},
-        {"Aloo Bhurjee"},
-        {"Dum Aloo"},
-        {"Alu Jeera"},
-        {"Alu Gobi"},
-        {"Mix Veg"},
-        {"Veg Kadai"},
-        {"Mushroom Masala"},
-        {"Paneer Burji"},
-        {"Paneer Butter Masala"},
-        {"Paneer Kadai"},
-        {"Palak Paneer"},
+        {"Rogan Josh---------------------Nveg"},
+        {"Aloo Bhurjee-------------------"},
+        {"Dum Aloo-----------------------"},
+        {"Alu Jeera----------------------"},
+        {"Alu Gobi-----------------------"},
+        {"Mix Veg------------------------"},
+        {"Veg Kadai----------------------"},
+        {"Mushroom Masala----------------"},
+        {"Paneer Burji-------------------"},
+        {"Paneer Butter Masala-----------"},
+        {"Paneer Kadai-------------------"},
+        {"Palak Paneer-------------------"},
         {"Paneer Mutter"},
         {"Malai Kofta"},
         {"Dal Fry"},
@@ -109,12 +113,16 @@ northIndianDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), northIndianItemsNames[i], northIndianItemsCost[i]);
     }
-    int northIndianChoice = 0;
-    printf("\n\nEnter the food number you want to order: ");
+    int northIndianChoice = 0, nq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &northIndianChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &nq);
     if (northIndianChoice >= 0 && northIndianChoice <= 23)
     {
         strcpy(resultOrder[*x], northIndianItemsNames[northIndianChoice - 1]);
+        quantity[*x] = nq;
+        price[*x] = northIndianItemsCost[northIndianChoice - 1];
         *x = *x + 1;
     }
     else if (northIndianChoice == 0)
@@ -140,7 +148,7 @@ firstTime:
     else if (stepChoice == 3)
         return 3;
 }
-int southIndianMenu(char resultOrder[255][255], int *x)
+int southIndianMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char southIndianItemsNames[][255] = {
         {"Tamarind Rice"},
@@ -161,14 +169,13 @@ int southIndianMenu(char resultOrder[255][255], int *x)
         {"Mulangi Sambar"},
         {"Ginger Chutney"},
         {"Roasted Chana Dal Chutney"},
-        {"Mango Kuzhambu"},  
+        {"Mango Kuzhambu"},
         {"Kasi Halwa"},
         {"Thick Butter Milk"},
         {"Garlic Podi Idli Fry"},
         {"Pesarattu"},
         {"Coconut Raita"},
-        {"Tomato Pachadi"}   
-    };
+        {"Tomato Pachadi"}};
     float southIndianItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 southIndianDisplay:
     printf("\n*******************************SOUTH INDIAN*******************************\n");
@@ -176,12 +183,17 @@ southIndianDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), southIndianItemsNames[i], southIndianItemsCost[i]);
     }
-    int southIndianChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int southIndianChoice = 0, SIq;    
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &southIndianChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &SIq);
     if (southIndianChoice > 0 && southIndianChoice <= 21)
     {
         strcpy(resultOrder[*x], southIndianItemsNames[southIndianChoice - 1]);
+        price[*x] = southIndianItemsCost[southIndianChoice - 1];
+
+        quantity[*x] = SIq;
         *x = *x + 1;
     }
     else if (southIndianChoice == 0)
@@ -207,7 +219,7 @@ firstTime:
     else if (stepChoice == 3)
         return 3;
 }
-int indianBreadsMenu(char resultOrder[255][255], int *x)
+int indianBreadsMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char indianBreadsItemsNames[][255] = {
         {""},
@@ -230,8 +242,7 @@ int indianBreadsMenu(char resultOrder[255][255], int *x)
         {""},
         {""},
         {""},
-        {""}
-    };
+        {""}};
     float indianBreadsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 indianBreadsDisplay:
     printf("\n*******************************INDIANBREADS*******************************\n");
@@ -239,12 +250,16 @@ indianBreadsDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), indianBreadsItemsNames[i], indianBreadsItemsCost[i]);
     }
-    int indianBreadsChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int indianBreadsChoice = 0, ibq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &indianBreadsChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &ibq);
     if (indianBreadsChoice > 0 && indianBreadsChoice <= 21)
     {
         strcpy(resultOrder[*x], indianBreadsItemsNames[indianBreadsChoice - 1]);
+        price[*x] = indianBreadsItemsCost[indianBreadsChoice - 1];
+        quantity[*x] = ibq;
         *x = *x + 1;
     }
     else if (indianBreadsChoice == 0)
@@ -271,7 +286,7 @@ firstTime:
         return 3;
 }
 
-int continentalMenu(char resultOrder[255][255], int *x)
+int continentalMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char continentalItemsNames[][255] = {
         {"Crispy Calamari Rings"},
@@ -294,8 +309,7 @@ int continentalMenu(char resultOrder[255][255], int *x)
         {"Lasagna"},
         {"Stuffed Grape Leaves"},
         {"Tyropita"},
-        {"Shrimp Basket With fries"}
-    };
+        {"Shrimp Basket With fries"}};
     float continentalItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 continentalDisplay:
     printf("\n*******************************CONTINENTAL*******************************\n");
@@ -303,12 +317,17 @@ continentalDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), continentalItemsNames[i], continentalItemsCost[i]);
     }
-    int continentalChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
-    scanf("%d", &continentalChoice);
+    int continentalChoice = 0, cq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
+    scanf("%d", &scontinentalChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &cq);
     if (continentalChoice > 0 && continentalChoice <= 21)
     {
         strcpy(resultOrder[*x], continentalItemsNames[continentalChoice - 1]);
+        price[*x] = continentalItemsCost[continentalChoice - 1];
+
+        quantity[*x] = cq;
         *x = *x + 1;
     }
     else if (continentalChoice == 0)
@@ -335,7 +354,7 @@ firstTime:
         return 3;
 }
 
-int breakfastMenu(char resultOrder[255][255], int *x)
+int breakfastMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char breakfastItemsNames[][255] = {
         {""},
@@ -358,8 +377,7 @@ int breakfastMenu(char resultOrder[255][255], int *x)
         {""},
         {""},
         {""},
-        {""}
-    };
+        {""}};
     float breakfastItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 breakfastDisplay:
     printf("\n*******************************BREAKFAST*******************************\n");
@@ -367,12 +385,16 @@ breakfastDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), breakfastItemsNames[i], breakfastItemsCost[i]);
     }
-    int breakfastChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int breakfastChoice = 0, bq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &breakfastChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &bq);
     if (breakfastChoice > 0 && breakfastChoice <= 21)
     {
         strcpy(resultOrder[*x], breakfastItemsNames[breakfastChoice - 1]);
+        price[*x] = breakfastItemsCost[breakfastChoice - 1];
+        quantity[*x] = bq;
         *x = *x + 1;
     }
     else if (breakfastChoice == 0)
@@ -399,7 +421,7 @@ firstTime:
         return 3;
 }
 
-int dessertsMenu(char resultOrder[255][255], int *x)
+int dessertsMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char dessertsItemsNames[][255] = {
         {"Chocolate Fondue"},
@@ -427,12 +449,17 @@ dessertsDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), dessertsItemsNames[i], dessertsItemsCost[i]);
     }
-    int dessertsChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int dessertsChoice = 0, dq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &dessertsChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &dq);
     if (dessertsChoice > 0 && dessertsChoice <= 21)
     {
         strcpy(resultOrder[*x], dessertsItemsNames[dessertsChoice - 1]);
+        price[*x] = dessertsItemsCost[dessertsChoice - 1];
+
+        quantity[*x] = dq;
         *x = *x + 1;
     }
     else if (dessertsChoice == 0)
@@ -458,7 +485,7 @@ firstTime:
     else if (stepChoice == 3)
         return 3;
 }
-int hotBeveragesMenu(char resultOrder[255][255], int *x)
+int hotBeveragesMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char hotBeveragesItemsNames[][255] = {
         {"Espresso"},
@@ -472,7 +499,7 @@ int hotBeveragesMenu(char resultOrder[255][255], int *x)
         {"Kesaria Doodh"},
         {"Steamed Milk"},
         {"Caramel Latte"},
-        
+
         /*{""},
         {""},
         {""},
@@ -491,12 +518,17 @@ hotBeveragesDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), hotBeveragesItemsNames[i], hotBeveragesItemsCost[i]);
     }
-    int hotBeveragesChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int hotBeveragesChoice = 0, hbq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &hotBeveragesChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &hbq);
     if (hotBeveragesChoice > 0 && hotBeveragesChoice <= 21)
     {
         strcpy(resultOrder[*x], hotBeveragesItemsNames[hotBeveragesChoice - 1]);
+                price[*x] = hotBeveragesItemsCost[hotBeveragesChoice - 1];
+
+        quantity[*x] = hbq;
         *x = *x + 1;
     }
     else if (hotBeveragesChoice == 0)
@@ -522,7 +554,7 @@ firstTime:
     else if (stepChoice == 3)
         return 3;
 }
-int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int *x)
+int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
     char cocktailsAndSoftDrinksItemsNames[][255] = {
         {"Caprioska"},
@@ -554,12 +586,16 @@ cocktailsAndSoftDrinksDisplay:
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), cocktailsAndSoftDrinksItemsNames[i], cocktailsAndSoftDrinksItemsCost[i]);
     }
-    int cocktailsAndSoftDrinksChoice = 0;
-    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    int cocktailsAndSoftDrinksChoice = 0, csq;
+    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
     scanf("%d", &cocktailsAndSoftDrinksChoice);
+    printf("Enter the quantity: ");
+    scanf("%d", &csq);
     if (cocktailsAndSoftDrinksChoice > 0 && cocktailsAndSoftDrinksChoice <= 21)
     {
         strcpy(resultOrder[*x], cocktailsAndSoftDrinksItemsNames[cocktailsAndSoftDrinksChoice - 1]);
+        quantity[*x] = csq;
+        price[*x] = cocktailsAndSoftDrinksItemsCost[cocktailsAndSoftDrinksChoice - 1];
         *x = *x + 1;
     }
     else if (cocktailsAndSoftDrinksChoice == 0)
