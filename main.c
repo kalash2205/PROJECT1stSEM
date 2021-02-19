@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "menu.h"
 #include "timeGap.h"
 #include "bill.h"
 #include "orderDisandPlace.h"
+#include "game.h"
 #include "custDetail.h"
+
 int main()
 {
-
         int x = 0;
         char menuOptions[][255] = {
             "APPETIZERS",
@@ -85,114 +87,122 @@ initialMenuBegin:
         case 4:
                 printf("\n");
                 stepChoice = indianBreadsMenu(resultOrder, quantity, price, &x);
+
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
                 {
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                case 5:
-                        printf("\n");
-
-                        stepChoice = continentalMenu(resultOrder, quantity, price, &x);
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                case 6:
-                        printf("\n");
-
-                        stepChoice = breakfastMenu(resultOrder, &x);
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                case 7:
-                        printf("\n");
-
-                        stepChoice = dessertsMenu(resultOrder, quantity, price, &x);
-{
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                case 8:
-                        printf("\n");
-
-                        stepChoice = hotBeveragesMenu(resultOrder, quantity, price, &x);
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                case 9:
-                        printf("\n");
-
-                        stepChoice = cocktailsAndSoftDrinksMenu(resultOrder, quantity, price, &x);
-                        if (stepChoice == 2)
-                                goto initialMenuBegin;
-                        else if (stepChoice == 3)
-                        {
-                                orderDisplay(resultOrder, &x);
-                                int chFin = 0;
-                                printf("\n1. Place the order.\n");
-                                printf("Enter your choice: ");
-                                scanf("%d", &chFin);
-                                if (chFin == 1)
-                                        goto placedOrder;
-                        }
-                        break;
-                default:
-                        printf("Sorry, thats not a valid menu choice\n\n");
-                        break;
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
                 }
-        placedOrder:
-                //timegap(10);
-                //displayBill();
-                //inputdetails();
+                break;
 
-                return 0;
+        case 5:
+                printf("\n");
+
+                stepChoice = continentalMenu(resultOrder, quantity, price, &x);
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
+                {
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
+                }
+                break;
+        case 6:
+                printf("\n");
+
+                stepChoice = breakfastMenu(resultOrder, quantity, price, &x);
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
+                {
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
+                }
+                break;
+        case 7:
+                printf("\n");
+
+                stepChoice = dessertsMenu(resultOrder, quantity, price, &x);
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
+                {
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
+                }
+                break;
+        case 8:
+                printf("\n");
+
+                stepChoice = hotBeveragesMenu(resultOrder, quantity, price, &x);
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
+                {
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
+                }
+                break;
+        case 9:
+                printf("\n");
+
+                stepChoice = cocktailsAndSoftDrinksMenu(resultOrder, quantity, price, &x);
+                if (stepChoice == 2)
+                        goto initialMenuBegin;
+                else if (stepChoice == 3)
+                {
+                        orderDisplay(resultOrder, &x);
+                        int chFin = 0;
+                        printf("\n1. Place the order.\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chFin);
+                        if (chFin == 1)
+                                goto placedOrder;
+                }
+                break;
+        default:
+                printf("Sorry, thats not a valid menu choice\n\n");
+                break;
         }
+placedOrder:
+        printf("\nYOUR ORDER HAS BEEN SUCCESSFULLY PLACED!!\nIt will be served shortly..\n\n");
+        printf("Would you like to play a guessing game while the foods coming?(Y/N): ");
+        char gameChoice;
+        scanf(" %c", &gameChoice);
+        if (gameChoice == 'Y')
+                guessGame();
+        else
+        {
+                printf("Alright! Wait for sometime\n");
+                timegap(10);
+        }
+        //displayBill();
+        return 0;
+}
