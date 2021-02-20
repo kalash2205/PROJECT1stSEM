@@ -319,7 +319,7 @@ continentalDisplay:
     }
     int continentalChoice = 0, cq;
     printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
-    scanf("%d", &scontinentalChoice);
+    scanf("%d", &continentalChoice);
     printf("Enter the quantity: ");
     scanf("%d", &cq);
     if (continentalChoice > 0 && continentalChoice <= 21)

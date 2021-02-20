@@ -573,8 +573,6 @@ cocktailsAndSoftDrinksDisplay:
     int cocktailsAndSoftDrinksChoice = 0, csq;
     printf("\n\nEnter the food number you want to order: ");
     scanf("%d", &cocktailsAndSoftDrinksChoice);
-    printf("Enter the quantity: ");
-    scanf("%d", csq);
     if (cocktailsAndSoftDrinksChoice > 0 && cocktailsAndSoftDrinksChoice <= 21)
     {
         strcpy(resultOrder[*x], cocktailsAndSoftDrinksItemsNames[cocktailsAndSoftDrinksChoice - 1]);
