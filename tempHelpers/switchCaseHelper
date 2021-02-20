@@ -1,5 +1,5 @@
 
-stepChoice=southIndianMenu(resultOrder, &x);
+stepChoice=soupsAndSaladsMenu(resultOrder, &x);
 if(stepChoice==2)
 goto initialMenuBegin;
 else if(stepChoice==3)
