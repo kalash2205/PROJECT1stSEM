@@ -3,7 +3,7 @@ typedef struct
                 char NAME[50];
                 char PHONE[15];
         }cust;
-        cust id;
+         cust id;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
