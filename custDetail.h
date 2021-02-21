@@ -1,8 +1,8 @@
-typedef struct
+/*typedef struct
 {
     char NAME[50];
     char PHONE[15];
-}customer;
+}customer;*/
 
 /*USER login();
 USER login()
@@ -20,7 +20,7 @@ USER login()
 }*/
 
 //void textfile(customer);
-void textfile(customer id)
+void textfile(cust id)
 {
     FILE *fptr;
     fptr = fopen("details.txt", "a+");
@@ -29,10 +29,9 @@ void textfile(customer id)
     fprintf(fptr, id.PHONE);
     fprintf(fptr, "\n");
 }
-void inputdetails()
-//int main()
+void inputdetails(cust id)
+
 {
-    customer id;
     printf("Enter you name: ");
     scanf(" %[^\n]s", id.NAME);
     printf("\nEnter you phone number: ");
