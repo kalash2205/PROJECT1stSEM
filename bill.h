@@ -1,8 +1,8 @@
 
-void displayBill(char resultOrder[255][255], int quantity[100], int price[100], int *x, cust id)
+void displayBill(char resultOrder[255][255], int quantity[100], int price[100], int *x, cust id, int discountChoice)
 {
     float subtotal = 0;
-    float discount;
+    float discount=0;
     float nettotal;
     float service;
     float cgst;
@@ -35,7 +35,10 @@ void displayBill(char resultOrder[255][255], int quantity[100], int price[100], 
     printf("\t\t|__________________________________________________________________________________________________|\n");
     for (int i = 0; i < *x; i++)
     {
-    printf("\t\t|%s         %d                      %d                   %d                                         ", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);
+        if(quantity[i]<10)
+            printf("\t\t%s         %d                      %d                   %d", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);
+        else
+            printf("\t\t%s         %d                      %d                   %d", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);   
     printf("\n");
     }
     printf("\t\t|__________________________________________________________________________________________________|\n");
@@ -43,6 +46,7 @@ void displayBill(char resultOrder[255][255], int quantity[100], int price[100], 
     {
         subtotal += quantity[i] * price[i];
     }
+    if (discountChoice==1)
     discount = 0.1 * subtotal;
     nettotal = subtotal - discount;
     service = 0.058 * nettotal;

@@ -65,6 +65,7 @@ startersDisplay:
         goto startersDisplay;
     }
     printf("\n%s added to order!\n", startersItemsNames[startersChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from Starters Menu?\n");
 firstTime:
     if (startersChoice == 0)
@@ -79,6 +80,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int northIndianMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
@@ -133,6 +139,7 @@ northIndianDisplay:
         goto northIndianDisplay;
     }
     printf("\n%s added to order!\n", northIndianItemsNames[northIndianChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from North Indian Menu?\n");
 firstTime:
     if (northIndianChoice == 0)
@@ -147,6 +154,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int southIndianMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
@@ -204,6 +216,7 @@ southIndianDisplay:
         goto southIndianDisplay;
     }
     printf("\n%s added to order!\n", southIndianItemsNames[southIndianChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from southIndian Menu?\n");
 firstTime:
     if (southIndianChoice == 0)
@@ -218,6 +231,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int indianBreadsMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
@@ -271,6 +289,7 @@ indianBreadsDisplay:
         goto indianBreadsDisplay;
     }
     printf("\n%s added to order!\n", indianBreadsItemsNames[indianBreadsChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from indianBreads Menu?\n");
 firstTime:
     if (indianBreadsChoice == 0)
@@ -285,6 +304,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 
 int continentalMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
@@ -339,6 +363,7 @@ continentalDisplay:
         goto continentalDisplay;
     }
     printf("\n%s added to order!\n", continentalItemsNames[continentalChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from continental Menu?\n");
 firstTime:
     if (continentalChoice == 0)
@@ -353,6 +378,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 
 /*int breakfastMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
@@ -406,6 +436,7 @@ breakfastDisplay:
         goto breakfastDisplay;
     }
     printf("\n%s added to order!\n", breakfastItemsNames[breakfastChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from breakfast Menu?\n");
 firstTime:
     if (breakfastChoice == 0)
@@ -420,6 +451,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }*/
 int soupsAndSaladsMenu(char resultOrder[255][255],int quantity[100], int price[100],  int *x)
 {
@@ -472,6 +508,7 @@ soupsAndSaladsDisplay:
         goto soupsAndSaladsDisplay;
     }
     printf("\n%s added to order!\n", soupsAndSaladsItemsNames[soupsAndSaladsChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from soupsAndSalads Menu?\n");
 firstTime:
     if (soupsAndSaladsChoice == 0)
@@ -486,6 +523,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int chineseMenu(char resultOrder[255][255], int quantity[100], int price[100],  int *x)
 {
@@ -539,6 +581,7 @@ chineseDisplay:
         goto chineseDisplay;
     }
     printf("\n%s added to order!\n", chineseItemsNames[chineseChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from chinese Menu?\n");
 firstTime:
     if (chineseChoice == 0)
@@ -553,6 +596,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 
 int dessertsMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
@@ -603,6 +651,7 @@ dessertsDisplay:
         goto dessertsDisplay;
     }
     printf("\n%s added to order!\n", dessertsItemsNames[dessertsChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from desserts Menu?\n");
 firstTime:
     if (dessertsChoice == 0)
@@ -617,6 +666,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int hotBeveragesMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
@@ -672,6 +726,7 @@ hotBeveragesDisplay:
         goto hotBeveragesDisplay;
     }
     printf("\n%s added to order!\n", hotBeveragesItemsNames[hotBeveragesChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from hotBeverages Menu?\n");
 firstTime:
     if (hotBeveragesChoice == 0)
@@ -686,6 +741,11 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
 int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
 {
@@ -739,6 +799,7 @@ cocktailsAndSoftDrinksDisplay:
         goto cocktailsAndSoftDrinksDisplay;
     }
     printf("\n%s added to order!\n", cocktailsAndSoftDrinksItemsNames[cocktailsAndSoftDrinksChoice - 1]);
+reTryStepChoice:    
     printf("\n1.Do you want to add anything more from cocktailsAndSoftDrinks Menu?\n");
 firstTime:
     if (cocktailsAndSoftDrinksChoice == 0)
@@ -753,4 +814,9 @@ firstTime:
         return 2;
     else if (stepChoice == 3)
         return 3;
+    else
+    {
+        printf("Invalid Choice!! Please try again!\n\n");
+        goto reTryStepChoice;
+    }
 }
