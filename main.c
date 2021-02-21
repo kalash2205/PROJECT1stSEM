@@ -51,13 +51,14 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
                 }
+                else
                 break;
         case 2:
                 printf("\n");
@@ -67,7 +68,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -84,7 +85,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -101,7 +102,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -118,7 +119,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -135,7 +136,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -149,7 +150,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -165,7 +166,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -182,7 +183,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -199,7 +200,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -216,7 +217,7 @@ initialMenuBegin:
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
                 {
-                        orderDisplay(resultOrder, &x);
+                        orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
                         printf("Enter your choice: ");
@@ -227,6 +228,7 @@ initialMenuBegin:
                 break;
         default:
                 printf("Sorry, thats not a valid menu choice\n\n");
+                goto initialMenuBegin;
                 break;
         }
 placedOrder:
@@ -234,8 +236,13 @@ placedOrder:
         printf("Would you like to play a guessing game while the food's coming?(Y/N): ");
         char gameChoice;
         scanf(" %c", &gameChoice);
+        int gameDiscountOffer=0;
         if (gameChoice == 'Y' || gameChoice == 'y')
-                guessGame();
+        {
+                gameDiscountOffer=guessGame();
+                if(gameDiscountOffer==1)
+                printf("For winning the game, we have applied a discount of 10\% to your order!\n");
+        }
         else
         {
                 printf("Alright! Wait for sometime\n\n\n");
@@ -243,6 +250,6 @@ placedOrder:
         }
         printf("Please enter your details for bill generation: \n");
         inputdetails(id);
-        displayBill(resultOrder, quantity, price, &x, id);
+        displayBill(resultOrder, quantity, price, &x, id, gameDiscountOffer);
         return 0;
 }

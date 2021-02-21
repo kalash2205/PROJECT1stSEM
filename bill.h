@@ -1,8 +1,8 @@
 
-void displayBill(char resultOrder[255][255], int quantity[100], int price[100], int *x, cust id)
+void displayBill(char resultOrder[255][255], int quantity[100], int price[100], int *x, cust id, int discountChoice)
 {
     float subtotal = 0;
-    float discount;
+    float discount=0;
     float nettotal;
     float service;
     float cgst;
@@ -13,9 +13,9 @@ void displayBill(char resultOrder[255][255], int quantity[100], int price[100], 
 
     //printf("\t\t*************************************************************************************************\n");
     printf("\t\t                                           P U Z Z L E S                                 \n");
-    printf("\t\t                                             (address)                                          \n");
-    printf("\t\t                                              phone                                            \n");
-    printf("\t\t                                              website                                          \n");
+    printf("\t\t                                            Silver City                                          \n");
+    printf("\t\t                                           +911127236623                                            \n");
+    //printf("\t\t                                              website                                          \n");
     //printf("\t\t                                              //restaurant name                                  \n");
     printf("\t\tDate:                                                                        Bill no. :          \n");
     printf("\t\tTable no. :                                                                  Billed By:          \n");
@@ -31,7 +31,10 @@ void displayBill(char resultOrder[255][255], int quantity[100], int price[100], 
     printf("\t\t_________________________________________________________________________________________________\n\n");
     for (int i = 0; i < *x; i++)
     {
-    printf("\t\t%s         %d                      %d                   %d", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);
+        if(quantity[i]<10)
+            printf("\t\t%s         %d                      %d                   %d", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);
+        else
+            printf("\t\t%s         %d                      %d                  %d", resultOrder[i], price[i], quantity[i], quantity[i] * price[i]);   
     printf("\n");
     }
     printf("\n\t\t_________________________________________________________________________________________________\n\n");
@@ -39,6 +42,7 @@ void displayBill(char resultOrder[255][255], int quantity[100], int price[100], 
     {
         subtotal += quantity[i] * price[i];
     }
+    if (discountChoice==1)
     discount = 0.1 * subtotal;
     nettotal = subtotal - discount;
     service = 0.058 * nettotal;

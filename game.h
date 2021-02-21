@@ -1,10 +1,9 @@
-void guessGame()
+int guessGame()
 {
     int randomNumber = 0;
     int guess = 0;
     int numberOfGuesses;
     time_t t;
-
     // Initialization of random number generator
     srand((unsigned) time(&t));
 
@@ -23,7 +22,7 @@ void guessGame()
         if(guess == randomNumber)
         {
             printf("\nCongratulations.  You guessed it!\n");
-            return;
+            return 1;
         }
         else if(guess < 0 || guess > 20)  // checking for an invalid guess
             printf("I said the number is between 0 and 20.\n");
@@ -33,4 +32,5 @@ void guessGame()
             printf("Sorry, %d is wrong.  My number is less than that.\n", guess);
     }
     printf("\nYou have had five tries and failed. The number was %d\n",randomNumber);
+    return 0;
 }
