@@ -1,4 +1,3 @@
-
 void displayBill(char resultOrder[255][255], int quantity[100], int price[100], int *x, cust id, int discountChoice)
 {
     float subtotal = 0;
