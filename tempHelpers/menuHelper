@@ -563,13 +563,20 @@ int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int quantity[100], in
         {""},
         {""}*/
     };
+<<<<<<< Updated upstream
     float cocktailsAndSoftDrinksItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 cocktailsAndSoftDrinksDisplay:
     printf("\n*******************************COCKTAILS AND SOFTDRINKS*******************************\n");
+=======
+    float chineseItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
+chineseDisplay:
+    printf("\n*******************************chinese*******************************\n");
+>>>>>>> Stashed changes
     for (int i = 0; i < 21; i++)
     {
-        printf("\t%d.%s\t\t%.2f\n", (i + 1), cocktailsAndSoftDrinksItemsNames[i], cocktailsAndSoftDrinksItemsCost[i]);
+        printf("\t%d.%s\t\t%.2f\n", (i + 1), chineseItemsNames[i], chineseItemsCost[i]);
     }
+<<<<<<< Updated upstream
     int cocktailsAndSoftDrinksChoice = 0, csq;
     printf("\n\nEnter the food number you want to order: ");
     scanf("%d", &cocktailsAndSoftDrinksChoice);
@@ -578,26 +585,34 @@ cocktailsAndSoftDrinksDisplay:
         strcpy(resultOrder[*x], cocktailsAndSoftDrinksItemsNames[cocktailsAndSoftDrinksChoice - 1]);
         quantity[*x] = csq;
         price[*x] = cocktailsAndSoftDrinksItemsCost[cocktailsAndSoftDrinksChoice - 1];
+=======
+    int chineseChoice = 0;
+    printf("\n\nEnter the food number you want to order(or 0 to get other options): ");
+    scanf("%d", &chineseChoice);
+    if (chineseChoice > 0 && chineseChoice <= 21)
+    {
+        strcpy(resultOrder[*x], chineseItemsNames[chineseChoice - 1]);
+>>>>>>> Stashed changes
         *x = *x + 1;
     }
-    else if (cocktailsAndSoftDrinksChoice == 0)
+    else if (chineseChoice == 0)
         goto firstTime;
     else
     {
         printf("Oops sorry! That item number doesn't exists. Please select again.\n");
-        goto cocktailsAndSoftDrinksDisplay;
+        goto chineseDisplay;
     }
-    printf("\n%s added to order!\n", cocktailsAndSoftDrinksItemsNames[cocktailsAndSoftDrinksChoice - 1]);
-    printf("\n1.Do you want to add anything more from cocktailsAndSoftDrinks Menu?\n");
+    printf("\n%s added to order!\n", chineseItemsNames[chineseChoice - 1]);
+    printf("\n1.Do you want to add anything more from chinese Menu?\n");
 firstTime:
-    if (cocktailsAndSoftDrinksChoice == 0)
-        printf("\n1.Do you want to see again the cocktailsAndSoftDrinks Menu?\n");
+    if (chineseChoice == 0)
+        printf("\n1.Do you want to see again the chinese Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
-        goto cocktailsAndSoftDrinksDisplay;
+        goto chineseDisplay;
     else if (stepChoice == 2)
         return 2;
     else if (stepChoice == 3)

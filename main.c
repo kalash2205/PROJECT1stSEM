@@ -3,7 +3,7 @@ typedef struct
                 char NAME[50];
                 char PHONE[15];
         }cust;
-        cust id;
+         cust id;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -241,7 +241,7 @@ placedOrder:
         {
                 gameDiscountOffer=guessGame();
                 if(gameDiscountOffer==1)
-                printf("For winning the game, we have applied a discount of 10\% to your order!\n");
+                printf("For winning the game, we have applied a discount of 10%c to your order!\n", '%');
         }
         else
         {
