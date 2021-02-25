@@ -72,6 +72,7 @@ firstTime:
         printf("\n1.Do you want to see again the Starters Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -146,6 +147,7 @@ firstTime:
         printf("\n1.Do you want to see again the North Indian Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -223,6 +225,7 @@ firstTime:
         printf("\n1.Do you want to see again the southIndian Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -296,6 +299,7 @@ firstTime:
         printf("\n1.Do you want to see again the indianBreads Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -370,6 +374,7 @@ firstTime:
         printf("\n1.Do you want to see again the continental Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -443,6 +448,7 @@ firstTime:
         printf("\n1.Do you want to see again the breakfast Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -515,6 +521,7 @@ firstTime:
         printf("\n1.Do you want to see again the soupsAndSalads Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -588,6 +595,7 @@ firstTime:
         printf("\n1.Do you want to see again the chinese Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -658,6 +666,7 @@ firstTime:
         printf("\n1.Do you want to see again the desserts Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -733,6 +742,7 @@ firstTime:
         printf("\n1.Do you want to see again the hotBeverages Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)
@@ -806,6 +816,7 @@ firstTime:
         printf("\n1.Do you want to see again the cocktailsAndSoftDrinks Menu?\n");
     printf("\n2.Do you want to step back and order from other options?\n");
     printf("\n3.Do you want to review and place your order?\n");
+    printf("\nEnter Your Choice: ");
     int stepChoice = 0;
     scanf("%d", &stepChoice);
     if (stepChoice == 1)

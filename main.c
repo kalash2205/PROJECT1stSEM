@@ -53,7 +53,9 @@ initialMenuBegin:
                 {
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
-                        printf("\n1. Place the order.");
+                        printf("\n1. Review the order.");
+                        printf("\n2. Add more items to the order.");
+                        printf("\n3. Place the order.");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -242,6 +244,7 @@ placedOrder:
                 gameDiscountOffer=guessGame();
                 if(gameDiscountOffer==1)
                 printf("For winning the game, we have applied a discount of 10%c to your order!\n", '%');
+                timeGap(2);
         }
         else
         {
