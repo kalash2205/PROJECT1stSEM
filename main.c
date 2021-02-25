@@ -3,7 +3,7 @@ typedef struct
                 char NAME[50];
                 char PHONE[15];
         }cust;
-         cust id;
+        cust id;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,8 +14,7 @@ typedef struct
 #include "orderDisandPlace.h"
 #include "game.h"
 #include "custDetail.h"
- 
-        
+       
 int main()
 {
         //clrscr();
@@ -145,19 +144,6 @@ initialMenuBegin:
                                 goto placedOrder;
                 }
 
-                /*stepChoice = breakfastMenu(resultOrder, quantity, price, &x);
-                if (stepChoice == 2)
-                        goto initialMenuBegin;
-                else if (stepChoice == 3)
-                {
-                        orderDisplay(resultOrder, &x, quantity);
-                        int chFin = 0;
-                        printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
-                        scanf("%d", &chFin);
-                        if (chFin == 1)
-                                goto placedOrder;
-                }*/
                 break;
         case 7:
 
@@ -249,6 +235,10 @@ placedOrder:
                 timegap(10);
         }
         printf("Please enter your details for bill generation: \n");
+         printf("Enter you name: ");
+    scanf(" %[^\n]s", id.NAME);
+    printf("\nEnter you phone number: ");
+    scanf("%s", &id.PHONE);
         inputdetails(id);
         displayBill(resultOrder, quantity, price, &x, id, gameDiscountOffer);
         return 0;
