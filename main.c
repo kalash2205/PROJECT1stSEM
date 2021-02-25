@@ -14,8 +14,7 @@ typedef struct
 #include "orderDisandPlace.h"
 #include "game.h"
 #include "custDetail.h"
- 
-        
+
 int main()
 {
         //clrscr();
