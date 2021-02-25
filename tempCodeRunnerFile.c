@@ -1,0 +1,1 @@
+inputdetails(id);
