@@ -1,9 +1,9 @@
 typedef struct
-        {
-                char NAME[50];
-                char PHONE[15];
-        }cust;
-        cust id;
+{
+        char NAME[50];
+        char PHONE[15];
+} cust;
+cust id;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,11 +14,11 @@ typedef struct
 #include "orderDisandPlace.h"
 #include "game.h"
 #include "custDetail.h"
-       
+
 int main()
 {
         //clrscr();
-        
+
         int x = 0;
         char menuOptions[][255] = {
             "STARTERS",
@@ -58,7 +58,7 @@ initialMenuBegin:
                                 goto placedOrder;
                 }
                 else
-                break;
+                        break;
         case 2:
                 printf("\n");
                 stepChoice = northIndianMenu(resultOrder, quantity, price, &x);
@@ -73,7 +73,11 @@ initialMenuBegin:
                         printf("Enter your choice: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
-                                goto placedOrder;
+                                {goto placedOrder;}
+                        else
+                        {
+           
+                        }
                 }
                 break;
         case 3:
@@ -222,12 +226,12 @@ placedOrder:
         printf("Would you like to play a guessing game while the food's coming?(Y/N): ");
         char gameChoice;
         scanf(" %c", &gameChoice);
-        int gameDiscountOffer=0;
+        int gameDiscountOffer = 0;
         if (gameChoice == 'Y' || gameChoice == 'y')
         {
-                gameDiscountOffer=guessGame();
-                if(gameDiscountOffer==1)
-                printf("For winning the game, we have applied a discount of 10%c to your order!\n", '%');
+                gameDiscountOffer = guessGame();
+                if (gameDiscountOffer == 1)
+                        printf("For winning the game, we have applied a discount of 10%c to your order!\n", '%');
         }
         else
         {
@@ -235,10 +239,10 @@ placedOrder:
                 timegap(10);
         }
         printf("Please enter your details for bill generation: \n");
-         printf("Enter you name: ");
-    scanf(" %[^\n]s", id.NAME);
-    printf("\nEnter you phone number: ");
-    scanf("%s", &id.PHONE);
+        printf("Enter you name: ");
+        scanf(" %[^\n]s", id.NAME);
+        printf("\nEnter you phone number: ");
+        scanf("%s", &id.PHONE);
         inputdetails(id);
         displayBill(resultOrder, quantity, price, &x, id, gameDiscountOffer);
         return 0;
