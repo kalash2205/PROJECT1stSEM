@@ -467,7 +467,7 @@ int soupsAndSaladsMenu(char resultOrder[255][255],int quantity[100], int price[1
 {
     char soupsAndSaladsItemsNames[][255] = {
         {"Tomato Soup--------------------veg"},
-        {"CLear Vegetable Soup-----------veg"},
+        {"Clear Vegetable Soup-----------veg"},
         {"French Onion Soup--------------veg"},
         {"Crab And Corn Soup------------nveg"},
         {"Mushroom Soup------------------veg"},
@@ -487,9 +487,9 @@ int soupsAndSaladsMenu(char resultOrder[255][255],int quantity[100], int price[1
         {"Coleslaw-----------------------veg"},
         {"Greek Salad--------------------veg"},
         {"Mixed Bean Salad---------------veg"}};
-    float soupsAndSaladsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
+    float soupsAndSaladsItemsCost[] = {120, 140, 140, 180, 130, 240, 140, 150, 210, 160, 220, 230, 130, 190, 210, 180, 160, 150, 230, 230, 120};
 soupsAndSaladsDisplay:
-    printf("\n*******************************soupsAndSalads*******************************\n");
+    printf("\n*******************************SOUPS AND SALADS*******************************\n");
     for (int i = 0; i < 21; i++)
     {
         printf("\t%d.%s\t\t%.2f\n", (i + 1), soupsAndSaladsItemsNames[i], soupsAndSaladsItemsCost[i]);
@@ -557,10 +557,8 @@ int chineseMenu(char resultOrder[255][255], int quantity[100], int price[100],  
         {"Chow Mein----------------------veg"},
         {"Ma Po Tofu---------------------veg"},
         {"Honey Chilli Potato------------veg"}
-        /*{""},
-        {""},
-        {""}*/};
-    float chineseItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260};
+        };
+    float chineseItemsCost[] = {230, 240, 190, 270, 310, 290, 250, 260, 310, 220, 240, 260, 280, 300, 340, 240, 260, 290};
 chineseDisplay:
     printf("\n*******************************chinese*******************************\n");
     for (int i = 0; i < 18; i++)
@@ -631,7 +629,7 @@ int dessertsMenu(char resultOrder[255][255], int quantity[100], int price[100], 
         {"Gajar Ka Halwa                    "},
         {"Gulab Jamun                       "},
     };
-    float dessertsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270};
+    float dessertsItemsCost[] = {280, 290, 260, 510, 500, 210, 640, 380, 570, 310, 150, 160, 230, 250, 220, 260};
 dessertsDisplay:
     printf("\n*******************************DESSERTS*******************************\n");
     for (int i = 0; i < 16; i++)
@@ -694,20 +692,9 @@ int hotBeveragesMenu(char resultOrder[255][255], int quantity[100], int price[10
         {"Hot Fruit Punch                   "},
         {"Kesaria Doodh                     "},
         {"Steamed Milk                      "},
-        {"Caramel Latte                     "},
-
-        /*{""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}*/
+        {"Caramel Latte                     "}
     };
-    float hotBeveragesItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120};
+    float hotBeveragesItemsCost[] = {190, 180, 200, 120, 140, 240, 210, 220, 130, 100, 220};
 hotBeveragesDisplay:
     printf("\n*******************************HOT BEVERAGES*******************************\n");
     for (int i = 0; i < 11; i++)
@@ -778,11 +765,8 @@ int cocktailsAndSoftDrinksMenu(char resultOrder[255][255], int quantity[100], in
         {"Shirley temple                    "},
         {"Lassi                             "},
         {"Cold Coffee                       "}
-        /*{""},
-        {""},
-        {""},
-        {""}*/};
-    float cocktailsAndSoftDrinksItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180};
+    };
+    float cocktailsAndSoftDrinksItemsCost[] = {170, 160, 200, 260, 250, 220, 310, 140, 190, 70, 70, 70, 160, 140, 190, 110, 170};
 cocktailsAndSoftDrinksDisplay:
     printf("\n*******************************COCKTAILS AND SOFTDRINKS*******************************\n");
     for (int i = 0; i < 17; i++)
