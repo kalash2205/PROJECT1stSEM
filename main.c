@@ -45,7 +45,6 @@ initialMenuBegin:
         case 1:
                 printf("\n");
                 stepChoice = startersMenu(resultOrder, quantity, price, &x);
-
                 if (stepChoice == 2)
                         goto initialMenuBegin;
                 else if (stepChoice == 3)
@@ -53,6 +52,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.");
+                         printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -70,7 +70,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 {goto placedOrder;}
@@ -91,7 +91,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -108,7 +108,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -125,7 +125,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -142,7 +142,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -159,7 +159,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -176,7 +176,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -193,7 +193,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
@@ -210,7 +210,7 @@ initialMenuBegin:
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
                         printf("\n1. Place the order.\n");
-                        printf("Enter your choice: ");
+                        printf("Press any key: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
