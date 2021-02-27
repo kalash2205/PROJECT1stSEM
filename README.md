@@ -21,7 +21,7 @@ DEPENDENCIES
 
 GET THE FILE ON MACHINE
 
-1. Download zip or open git bash and type: git clone (url)
+1. Download zip or open git bash and type: git clone https://github.com/Tushar49/ProjectSem1.git
 2. Change the working directory to the location of the cloned directory
 
 COMPILE AND RUN
