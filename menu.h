@@ -259,10 +259,8 @@ int indianBreadsMenu(char resultOrder[255][255], int quantity[100], int price[10
         {"Masala Papad-------------------veg"},
         {"Papad Fry----------------------veg"},
         {"Cinnamon Sugar Bread-----------veg"},
-        /*{""},
-        {""},
-        {""}*/};
-    float indianBreadsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260};
+       };
+    float indianBreadsItemsCost[] = {130, 100, 100, 140, 170, 240, 210, 150, 160, 110, 220, 150, 200, 190, 140, 170, 100, 260};
 indianBreadsDisplay:
     printf("\n*******************************INDIANBREADS*******************************\n");
     for (int i = 0; i < 18; i++)
@@ -335,7 +333,7 @@ int continentalMenu(char resultOrder[255][255], int quantity[100], int price[100
         {"Stuffed Grape Leaves-----------veg"},
         {"Tyropita----------------------nveg"},
         {"Shrimp Basket With fries------nveg"}};
-    float continentalItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
+    float continentalItemsCost[] = {330, 340, 200, 340, 370, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 continentalDisplay:
     printf("\n*******************************CONTINENTAL*******************************\n");
     for (int i = 0; i < 21; i++)
@@ -385,78 +383,7 @@ firstTime:
     }
 }
 
-/*int breakfastMenu(char resultOrder[255][255], int quantity[100], int price[100], int *x)
-{
-    char breakfastItemsNames[][255] = {
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}};
-    float breakfastItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
-breakfastDisplay:
-    printf("\n*******************************BREAKFAST*******************************\n");
-    for (int i = 0; i < 21; i++)
-    {
-        printf("\t%d.%s\t\t%.2f\n", (i + 1), breakfastItemsNames[i], breakfastItemsCost[i]);
-    }
-    int breakfastChoice = 0, bq;
-    printf("\n\nEnter the food number you want to order (or 0 to get other options): ");
-    scanf("%d", &breakfastChoice);
-    printf("Enter the quantity: ");
-    scanf("%d", &bq);
-    if (breakfastChoice > 0 && breakfastChoice <= 21)
-    {
-        strcpy(resultOrder[*x], breakfastItemsNames[breakfastChoice - 1]);
-        price[*x] = breakfastItemsCost[breakfastChoice - 1];
-        quantity[*x] = bq;
-        *x = *x + 1;
-    }
-    else if (breakfastChoice == 0)
-        goto firstTime;
-    else
-    {
-        printf("Oops sorry! That item number doesn't exists. Please select again.\n");
-        goto breakfastDisplay;
-    }
-    printf("\n%s added to order!\n", breakfastItemsNames[breakfastChoice - 1]);
-reTryStepChoice:    
-    printf("\n1.Do you want to add anything more from breakfast Menu?\n");
-firstTime:
-    if (breakfastChoice == 0)
-        printf("\n1.Do you want to see again the breakfast Menu?\n");
-    printf("\n2.Do you want to step back and order from other options?\n");
-    printf("\n3.Do you want to review and place your order?\n");
-    int stepChoice = 0;
-    scanf("%d", &stepChoice);
-    if (stepChoice == 1)
-        goto breakfastDisplay;
-    else if (stepChoice == 2)
-        return 2;
-    else if (stepChoice == 3)
-        return 3;
-    else
-    {
-        printf("Invalid Choice!! Please try again!\n\n");
-        goto reTryStepChoice;
-    }
-}*/
+
 int soupsAndSaladsMenu(char resultOrder[255][255],int quantity[100], int price[100],  int *x)
 {
     char soupsAndSaladsItemsNames[][255] = {
@@ -481,7 +408,7 @@ int soupsAndSaladsMenu(char resultOrder[255][255],int quantity[100], int price[1
         {"Coleslaw-----------------------veg"},
         {"Greek Salad--------------------veg"},
         {"Mixed Bean Salad---------------veg"}};
-    float soupsAndSaladsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
+    float soupsAndSaladsItemsCost[] = {130, 140, 200, 180, 170, 240, 210, 100, 260, 310, 120, 150, 200, 190, 220, 270, 180, 260, 300, 150, 240};
 soupsAndSaladsDisplay:
     printf("\n*******************************soupsAndSalads*******************************\n");
     for (int i = 0; i < 21; i++)
@@ -550,10 +477,8 @@ int chineseMenu(char resultOrder[255][255], int quantity[100], int price[100],  
         {"Chow Mein----------------------veg"},
         {"Ma Po Tofu---------------------veg"},
         {"Honey Chilli Potato------------veg"}
-        /*{""},
-        {""},
-        {""}*/};
-    float chineseItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270, 180, 260};
+        };
+    float chineseItemsCost[] = {230, 140, 200, 140, 170, 340, 210, 270, 360, 310, 120, 180, 200, 190, 220, 270, 190, 270};
 chineseDisplay:
     printf("\n*******************************chinese*******************************\n");
     for (int i = 0; i < 18; i++)
@@ -623,7 +548,7 @@ int dessertsMenu(char resultOrder[255][255], int quantity[100], int price[100], 
         {"Gajar Ka Halwa                    "},
         {"Gulab Jamun                       "},
     };
-    float dessertsItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120, 150, 200, 190, 220, 270};
+    float dessertsItemsCost[] = {230, 340, 200, 240, 270, 240, 210, 300, 360, 310, 220, 150, 200, 190, 220, 170};
 dessertsDisplay:
     printf("\n*******************************DESSERTS*******************************\n");
     for (int i = 0; i < 16; i++)
@@ -687,18 +612,8 @@ int hotBeveragesMenu(char resultOrder[255][255], int quantity[100], int price[10
         {"Steamed Milk                      "},
         {"Caramel Latte                     "},
 
-        /*{""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""},
-        {""}*/
     };
-    float hotBeveragesItemsCost[] = {130, 340, 200, 140, 170, 240, 210, 300, 360, 310, 120};
+    float hotBeveragesItemsCost[] = {130, 140, 200, 100, 120, 240, 210, 300, 160, 100, 220};
 hotBeveragesDisplay:
     printf("\n*******************************HOT BEVERAGES*******************************\n");
     for (int i = 0; i < 11; i++)
