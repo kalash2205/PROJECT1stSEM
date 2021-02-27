@@ -30,13 +30,12 @@ void textfile(cust id)
     fprintf(fptr, "\n");
 }
 void inputdetails(cust id)
-
 {
-    printf("Enter you name: ");
+   /* printf("Enter you name: ");
     scanf(" %[^\n]s", id.NAME);
     printf("\nEnter you phone number: ");
-    scanf("%s", &id.PHONE);
-    textfile(id);
+    scanf("%s", &id.PHONE);*/
+    textfile(id);    
 }
 
 
