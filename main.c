@@ -81,7 +81,11 @@ initialMenuBegin:
                         printf("Enter your choice: ");
                         scanf("%d", &chFin);
                         if (chFin == 1)
-                                goto placedOrder;
+                                {goto placedOrder;}
+                        else
+                        {
+           
+                        }
                 }
                 break;
         case 3:
