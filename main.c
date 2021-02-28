@@ -232,6 +232,7 @@ placedOrder:
                 gameDiscountOffer = guessGame();
                 if (gameDiscountOffer == 1)
                         printf("For winning the game, we have applied a discount of 10%c to your order!\n", '%');
+                timegap(2);
         }
         else
         {
