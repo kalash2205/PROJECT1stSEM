@@ -51,11 +51,18 @@ initialMenuBegin:
                 {
                         orderDisplay(resultOrder, &x, quantity);
                         int chFin = 0;
+                        workInProgressTryAgain:
                         printf("\n1. Place the order.");
-                         printf("Press any key: ");
+                        printf("\n3. Review the order.(Work in progres...)");
+                        printf("\n2. Add more items to the order.(Work in progres...)");
                         scanf("%d", &chFin);
                         if (chFin == 1)
                                 goto placedOrder;
+                        else if(chFin==2 || chFin == 3)
+                        {
+                                printf("Sorry these options are still being edited. Please select again.");
+                                goto workInProgressTryAgain;
+                        }
                 }
                 else
                         break;
@@ -236,9 +243,12 @@ placedOrder:
         }
         else
         {
-                printf("Alright! Wait for sometime\n\n\n");
-                timegap(10);
+                printf("Alright! Wait for sometime while we prepare your order...\n\n\n");
+                timegap(10);   //Time taken to prepare order is 10 seconds.
         }
+        printf("Thank you for waiting!\n\nYour order has been served. Please enjoy your meal.\n\n");
+        timegap(5);  //Time gap of 5 seconds for eating
+        printf("\n\n\nWe hope that the meal was to your taste!\n\n");
         printf("Please enter your details for bill generation: \n");
         printf("Enter you name: ");
         scanf(" %[^\n]s", id.NAME);
