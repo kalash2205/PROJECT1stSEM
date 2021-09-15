@@ -38,8 +38,8 @@ CONTRIBUTORS
 
 CONTACT US
 
-1.201210050@nitdelhi.ac.in
-2.201210025@nitdelhi.ac.in
+201210050@nitdelhi.ac.in
+201210025@nitdelhi.ac.in
 
 
 
